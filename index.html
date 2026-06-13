@@ -81,39 +81,79 @@
   <section id="projects" class="section">
     <h2 class="section-title">Projects</h2>
     <div class="projects-grid">
+
       <div class="project-card">
-        <div class="project-image"></div>
+        <div class="project-demo" id="demo-calculator">
+          <div class="calc">
+            <div class="calc-display" id="calcDisplay">0</div>
+            <div class="calc-buttons">
+              <button class="calc-btn" onclick="calcClear()">C</button>
+              <button class="calc-btn" onclick="calcBackspace()">&larr;</button>
+              <button class="calc-btn" onclick="calcInput('%')">%</button>
+              <button class="calc-btn accent" onclick="calcInput('/')">/</button>
+              <button class="calc-btn" onclick="calcInput('7')">7</button>
+              <button class="calc-btn" onclick="calcInput('8')">8</button>
+              <button class="calc-btn" onclick="calcInput('9')">9</button>
+              <button class="calc-btn accent" onclick="calcInput('*')">×</button>
+              <button class="calc-btn" onclick="calcInput('4')">4</button>
+              <button class="calc-btn" onclick="calcInput('5')">5</button>
+              <button class="calc-btn" onclick="calcInput('6')">6</button>
+              <button class="calc-btn accent" onclick="calcInput('-')">-</button>
+              <button class="calc-btn" onclick="calcInput('1')">1</button>
+              <button class="calc-btn" onclick="calcInput('2')">2</button>
+              <button class="calc-btn" onclick="calcInput('3')">3</button>
+              <button class="calc-btn accent" onclick="calcInput('+')">+</button>
+              <button class="calc-btn span2" onclick="calcInput('0')">0</button>
+              <button class="calc-btn" onclick="calcInput('.')">.</button>
+              <button class="calc-btn accent" onclick="calcEquals()">=</button>
+            </div>
+          </div>
+        </div>
         <div class="project-info">
-          <h3>Project One</h3>
-          <p>A brief description of what this project does and the technologies used.</p>
+          <h3>Calculator</h3>
+          <p>A clean calculator built with vanilla JS. Supports basic operations and percentage.</p>
           <div class="project-links">
-            <a href="#" class="btn btn-sm">Live Demo</a>
             <a href="#" class="btn btn-sm btn-outline">Source</a>
           </div>
         </div>
       </div>
+
       <div class="project-card">
-        <div class="project-image"></div>
+        <div class="project-demo" id="demo-todo">
+          <div class="todo">
+            <form class="todo-form" id="todoForm">
+              <input type="text" id="todoInput" placeholder="Add a task..." autocomplete="off">
+              <button type="submit" class="btn btn-sm">Add</button>
+            </form>
+            <ul class="todo-list" id="todoList"></ul>
+            <p class="todo-empty" id="todoEmpty">No tasks yet</p>
+          </div>
+        </div>
         <div class="project-info">
-          <h3>Project Two</h3>
-          <p>A brief description of what this project does and the technologies used.</p>
+          <h3>Todo App</h3>
+          <p>A minimal task manager with add, complete, and delete functionality.</p>
           <div class="project-links">
-            <a href="#" class="btn btn-sm">Live Demo</a>
             <a href="#" class="btn btn-sm btn-outline">Source</a>
           </div>
         </div>
       </div>
+
       <div class="project-card">
-        <div class="project-image"></div>
+        <div class="project-demo" id="demo-colors">
+          <div class="colors">
+            <div class="color-palette" id="colorPalette"></div>
+            <button class="btn btn-sm" onclick="generatePalette()">Generate</button>
+          </div>
+        </div>
         <div class="project-info">
-          <h3>Project Three</h3>
-          <p>A brief description of what this project does and the technologies used.</p>
+          <h3>Color Palette Generator</h3>
+          <p>Generates harmonious color palettes. Click any swatch to copy its hex code.</p>
           <div class="project-links">
-            <a href="#" class="btn btn-sm">Live Demo</a>
             <a href="#" class="btn btn-sm btn-outline">Source</a>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
