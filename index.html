@@ -88,61 +88,67 @@
           <button class="carousel-arrow right" onclick="carouselNext(this)">&#8250;</button>
           <div class="carousel-track">
             <div class="carousel-slide active">
-              <div class="project-demo" id="demo-calculator">
-                <div class="calc">
-                  <div class="calc-display" id="calcDisplay">0</div>
-                  <div class="calc-buttons">
-                    <button class="calc-btn" onclick="calcClear()">C</button>
-                    <button class="calc-btn" onclick="calcBackspace()">&larr;</button>
-                    <button class="calc-btn" onclick="calcInput('%')">%</button>
-                    <button class="calc-btn accent" onclick="calcInput('/')">/</button>
-                    <button class="calc-btn" onclick="calcInput('7')">7</button>
-                    <button class="calc-btn" onclick="calcInput('8')">8</button>
-                    <button class="calc-btn" onclick="calcInput('9')">9</button>
-                    <button class="calc-btn accent" onclick="calcInput('*')">×</button>
-                    <button class="calc-btn" onclick="calcInput('4')">4</button>
-                    <button class="calc-btn" onclick="calcInput('5')">5</button>
-                    <button class="calc-btn" onclick="calcInput('6')">6</button>
-                    <button class="calc-btn accent" onclick="calcInput('-')">-</button>
-                    <button class="calc-btn" onclick="calcInput('1')">1</button>
-                    <button class="calc-btn" onclick="calcInput('2')">2</button>
-                    <button class="calc-btn" onclick="calcInput('3')">3</button>
-                    <button class="calc-btn accent" onclick="calcInput('+')">+</button>
-                    <button class="calc-btn span2" onclick="calcInput('0')">0</button>
-                    <button class="calc-btn" onclick="calcInput('.')">.</button>
-                    <button class="calc-btn accent" onclick="calcEquals()">=</button>
+              <div class="slide-split">
+                <div class="slide-demo">
+                  <div class="calc">
+                    <div class="calc-display" id="calcDisplay">0</div>
+                    <div class="calc-buttons">
+                      <button class="calc-btn" onclick="calcClear()">C</button>
+                      <button class="calc-btn" onclick="calcBackspace()">&larr;</button>
+                      <button class="calc-btn" onclick="calcInput('%')">%</button>
+                      <button class="calc-btn accent" onclick="calcInput('/')">/</button>
+                      <button class="calc-btn" onclick="calcInput('7')">7</button>
+                      <button class="calc-btn" onclick="calcInput('8')">8</button>
+                      <button class="calc-btn" onclick="calcInput('9')">9</button>
+                      <button class="calc-btn accent" onclick="calcInput('*')">×</button>
+                      <button class="calc-btn" onclick="calcInput('4')">4</button>
+                      <button class="calc-btn" onclick="calcInput('5')">5</button>
+                      <button class="calc-btn" onclick="calcInput('6')">6</button>
+                      <button class="calc-btn accent" onclick="calcInput('-')">-</button>
+                      <button class="calc-btn" onclick="calcInput('1')">1</button>
+                      <button class="calc-btn" onclick="calcInput('2')">2</button>
+                      <button class="calc-btn" onclick="calcInput('3')">3</button>
+                      <button class="calc-btn accent" onclick="calcInput('+')">+</button>
+                      <button class="calc-btn span2" onclick="calcInput('0')">0</button>
+                      <button class="calc-btn" onclick="calcInput('.')">.</button>
+                      <button class="calc-btn accent" onclick="calcEquals()">=</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-text">
+                  <h3>Calculator</h3>
+                  <p>A clean, responsive calculator built with vanilla JavaScript. Supports all basic arithmetic operations, percentage calculations, and decimal inputs.</p>
+                  <div class="slide-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">CSS Grid</span>
+                    <span class="tag">Responsive</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="carousel-slide">
-              <div class="slide-text">
-                <h3>Calculator</h3>
-                <p>A clean, responsive calculator built with vanilla JavaScript. Supports all basic arithmetic operations, percentage calculations, and decimal inputs with a polished UI.</p>
-                <div class="slide-tags">
-                  <span class="tag">JavaScript</span>
-                  <span class="tag">CSS Grid</span>
-                  <span class="tag">Responsive</span>
+              <div class="slide-split">
+                <div class="slide-demo">
+                  <div class="slide-yt">
+                    <iframe src="https://www.youtube.com/embed/6HVYHNTDOFs" title="Calculator Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="carousel-slide">
-              <div class="slide-text">
-                <h3>Features</h3>
-                <ul class="slide-list">
-                  <li>Keyboard-like button interface</li>
-                  <li>Backspace and clear functions</li>
-                  <li>Real-time expression display</li>
-                  <li>Error handling for invalid math</li>
-                </ul>
-                <a href="#" class="btn btn-sm btn-outline" style="margin-top:1rem">View Source</a>
+                <div class="slide-text">
+                  <h3>Features</h3>
+                  <ul class="slide-list">
+                    <li>Keyboard-like button interface</li>
+                    <li>Backspace and clear functions</li>
+                    <li>Real-time expression display</li>
+                    <li>Error handling for invalid math</li>
+                  </ul>
+                  <a href="#" class="btn btn-sm btn-outline" style="margin-top:1.5rem">View Source</a>
+                </div>
               </div>
             </div>
           </div>
           <div class="carousel-dots">
             <span class="dot active" onclick="carouselGo(this, 0)"></span>
             <span class="dot" onclick="carouselGo(this, 1)"></span>
-            <span class="dot" onclick="carouselGo(this, 2)"></span>
           </div>
         </div>
       </div>
@@ -153,45 +159,51 @@
           <button class="carousel-arrow right" onclick="carouselNext(this)">&#8250;</button>
           <div class="carousel-track">
             <div class="carousel-slide active">
-              <div class="project-demo" id="demo-todo">
-                <div class="todo">
-                  <form class="todo-form" id="todoForm">
-                    <input type="text" id="todoInput" placeholder="Add a task..." autocomplete="off">
-                    <button type="submit" class="btn btn-sm">Add</button>
-                  </form>
-                  <ul class="todo-list" id="todoList"></ul>
-                  <p class="todo-empty" id="todoEmpty">No tasks yet</p>
+              <div class="slide-split">
+                <div class="slide-demo">
+                  <div class="todo">
+                    <form class="todo-form" id="todoForm">
+                      <input type="text" id="todoInput" placeholder="Add a task..." autocomplete="off">
+                      <button type="submit" class="btn btn-sm">Add</button>
+                    </form>
+                    <ul class="todo-list" id="todoList"></ul>
+                    <p class="todo-empty" id="todoEmpty">No tasks yet</p>
+                  </div>
+                </div>
+                <div class="slide-text">
+                  <h3>Todo App</h3>
+                  <p>A minimal, distraction-free task manager. Add tasks, mark them complete with a click, and remove them when done.</p>
+                  <div class="slide-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">DOM API</span>
+                    <span class="tag">Minimal UI</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="carousel-slide">
-              <div class="slide-text">
-                <h3>Todo App</h3>
-                <p>A minimal, distraction-free task manager. Add tasks, mark them complete with a click, and remove them when done. Data stays during your session.</p>
-                <div class="slide-tags">
-                  <span class="tag">JavaScript</span>
-                  <span class="tag">DOM API</span>
-                  <span class="tag">Minimal UI</span>
+              <div class="slide-split">
+                <div class="slide-demo">
+                  <div class="slide-yt">
+                    <iframe src="https://www.youtube.com/embed/6HVYHNTDOFs" title="Todo Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="carousel-slide">
-              <div class="slide-text">
-                <h3>Features</h3>
-                <ul class="slide-list">
-                  <li>Instant task creation via form</li>
-                  <li>Click to toggle complete state</li>
-                  <li>Delete individual tasks</li>
-                  <li>Empty state message</li>
-                </ul>
-                <a href="#" class="btn btn-sm btn-outline" style="margin-top:1rem">View Source</a>
+                <div class="slide-text">
+                  <h3>Features</h3>
+                  <ul class="slide-list">
+                    <li>Instant task creation via form</li>
+                    <li>Click to toggle complete state</li>
+                    <li>Delete individual tasks</li>
+                    <li>Empty state message</li>
+                  </ul>
+                  <a href="#" class="btn btn-sm btn-outline" style="margin-top:1.5rem">View Source</a>
+                </div>
               </div>
             </div>
           </div>
           <div class="carousel-dots">
             <span class="dot active" onclick="carouselGo(this, 0)"></span>
             <span class="dot" onclick="carouselGo(this, 1)"></span>
-            <span class="dot" onclick="carouselGo(this, 2)"></span>
           </div>
         </div>
       </div>
@@ -202,41 +214,47 @@
           <button class="carousel-arrow right" onclick="carouselNext(this)">&#8250;</button>
           <div class="carousel-track">
             <div class="carousel-slide active">
-              <div class="project-demo" id="demo-colors">
-                <div class="colors">
-                  <div class="color-palette" id="colorPalette"></div>
-                  <button class="btn btn-sm" onclick="generatePalette()">Generate</button>
+              <div class="slide-split">
+                <div class="slide-demo">
+                  <div class="colors">
+                    <div class="color-palette" id="colorPalette"></div>
+                    <button class="btn btn-sm" onclick="generatePalette()">Generate</button>
+                  </div>
+                </div>
+                <div class="slide-text">
+                  <h3>Color Palette Generator</h3>
+                  <p>Generate beautiful, harmonious color palettes on the fly. Click any swatch to copy its hex code to your clipboard.</p>
+                  <div class="slide-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">HSL Color Space</span>
+                    <span class="tag">Clipboard API</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="carousel-slide">
-              <div class="slide-text">
-                <h3>Color Palette Generator</h3>
-                <p>Generate beautiful, harmonious color palettes on the fly. Click any swatch to copy its hex code to your clipboard for use in your own projects.</p>
-                <div class="slide-tags">
-                  <span class="tag">JavaScript</span>
-                  <span class="tag">HSL Color Space</span>
-                  <span class="tag">Clipboard API</span>
+              <div class="slide-split">
+                <div class="slide-demo">
+                  <div class="slide-yt">
+                    <iframe src="https://www.youtube.com/embed/6HVYHNTDOFs" title="Color Palette Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="carousel-slide">
-              <div class="slide-text">
-                <h3>Features</h3>
-                <ul class="slide-list">
-                  <li>Random HSL-based palette generation</li>
-                  <li>One-click hex code copy</li>
-                  <li>Visual copy feedback</li>
-                  <li>Consistent saturation and lightness</li>
-                </ul>
-                <a href="#" class="btn btn-sm btn-outline" style="margin-top:1rem">View Source</a>
+                <div class="slide-text">
+                  <h3>Features</h3>
+                  <ul class="slide-list">
+                    <li>Random HSL-based palette generation</li>
+                    <li>One-click hex code copy</li>
+                    <li>Visual copy feedback</li>
+                    <li>Consistent saturation and lightness</li>
+                  </ul>
+                  <a href="#" class="btn btn-sm btn-outline" style="margin-top:1.5rem">View Source</a>
+                </div>
               </div>
             </div>
           </div>
           <div class="carousel-dots">
             <span class="dot active" onclick="carouselGo(this, 0)"></span>
             <span class="dot" onclick="carouselGo(this, 1)"></span>
-            <span class="dot" onclick="carouselGo(this, 2)"></span>
           </div>
         </div>
       </div>
