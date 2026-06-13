@@ -120,3 +120,43 @@ function hslToHex(h, s, l) {
 }
 
 generatePalette();
+
+// Carousel
+function getCarouselIndex(carousel) {
+  const track = carousel.querySelector('.carousel-track');
+  const slides = track.children;
+  for (let i = 0; i < slides.length; i++) {
+    if (slides[i].classList.contains('active')) return i;
+  }
+  return 0;
+}
+
+function carouselGo(dot, index) {
+  const carousel = dot.closest('[data-carousel]');
+  const track = carousel.querySelector('.carousel-track');
+  const slides = track.children;
+  const dots = carousel.querySelectorAll('.dot');
+
+  slides[getCarouselIndex(carousel)].classList.remove('active');
+  dots[getCarouselIndex(carousel)].classList.remove('active');
+
+  track.style.transform = `translateX(-${index * 100}%)`;
+  slides[index].classList.add('active');
+  dots[index].classList.add('active');
+}
+
+function carouselNext(btn) {
+  const carousel = btn.closest('[data-carousel]');
+  const dots = carousel.querySelectorAll('.dot');
+  const total = dots.length;
+  const next = (getCarouselIndex(carousel) + 1) % total;
+  carouselGo(dots[next], next);
+}
+
+function carouselPrev(btn) {
+  const carousel = btn.closest('[data-carousel]');
+  const dots = carousel.querySelectorAll('.dot');
+  const total = dots.length;
+  const prev = (getCarouselIndex(carousel) - 1 + total) % total;
+  carouselGo(dots[prev], prev);
+}

@@ -272,14 +272,135 @@ ul {
   transform: translateY(-4px);
 }
 
-.project-demo {
-  padding: 1.5rem;
-  background: var(--bg);
+/* Carousel */
+.carousel {
+  position: relative;
   border-bottom: 1px solid var(--border);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 260px;
+  min-height: 300px;
+}
+
+.carousel-slide.active {
+  display: flex;
+}
+
+.project-demo {
+  padding: 1.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.carousel-arrow:hover {
+  border-color: var(--accent);
+  background: var(--bg-hover);
+}
+
+.carousel-arrow.left { left: 12px; }
+.carousel-arrow.right { right: 12px; }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dot.active {
+  background: var(--accent);
+}
+
+/* Slide text */
+.slide-text {
+  padding: 2rem;
+  text-align: left;
+}
+
+.slide-text h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.slide-text p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.slide-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-muted);
+}
+
+.slide-list {
+  list-style: none;
+  padding: 0;
+}
+
+.slide-list li {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 0.3rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.slide-list li::before {
+  content: '\2022';
+  color: var(--accent);
+  position: absolute;
+  left: 0;
 }
 
 .project-info {
