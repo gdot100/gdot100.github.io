@@ -276,6 +276,7 @@ ul {
 .carousel {
   position: relative;
   border-bottom: 1px solid var(--border);
+  overflow: hidden;
 }
 
 .carousel-track {
@@ -285,14 +286,11 @@ ul {
 
 .carousel-slide {
   min-width: 100%;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 300px;
-}
-
-.carousel-slide.active {
-  display: flex;
 }
 
 .project-demo {
